@@ -1,4 +1,4 @@
-package com.alepruebas.beans;
+package alepruebas.beans;
 
 public class Mundo {
 

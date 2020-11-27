@@ -1,6 +1,6 @@
-package com.alepruebas.beans.spring;
+package alepruebas.spring;
 
-import com.alepruebas.beans.Mundo;
+import alepruebas.beans.Mundo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
