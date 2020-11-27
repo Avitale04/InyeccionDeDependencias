@@ -3,11 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mundo" class="alepruebas.beans.Mundo">
-
-        <property name="saludo" value="Hola Mundo con XML"></property>
-        <property name="despedida" value="Chao Mundo con XML"></property>
-
+    <bean id="mundo" class="alepruebas.holaMundo.beans.Mundo">
+        <property name="saludo" value="Hola Mundo con XML"/>
+        <property name="despedida" value="Chao Mundo con XML"/>
+    </bean>
+    <bean id="persona" class="alepruebas.persona.beans.Persona">
+        <constructor-arg type="int" value="95804612"/>
+        <constructor-arg type="java.lang.String" value="Alejandro"/>
+        <constructor-arg type="java.lang.String" value="Vitale"/>
+        <constructor-arg type="java.lang.String" value="Programador"/>
     </bean>
 
 </beans>

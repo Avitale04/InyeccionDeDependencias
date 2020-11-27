@@ -1,4 +1,4 @@
-package alepruebas.beans;
+package alepruebas.holaMundo.beans;
 
 import org.springframework.beans.factory.annotation.Value;
 

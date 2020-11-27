@@ -1,12 +1,12 @@
-package alepruebas.spring;
+package alepruebas.holaMundo.spring;
 
-import alepruebas.beans.AppConfig;
-import alepruebas.beans.Mundo;
+import alepruebas.holaMundo.beans.AppConfigMundo;
+import alepruebas.holaMundo.beans.Mundo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class App {
+public class AppMundo {
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class App {
         System.out.println(" ");
 
         //lamado a traves del Annotations
-        ApplicationContext appContexAnnotations = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext appContexAnnotations = new AnnotationConfigApplicationContext(AppConfigMundo.class);
         Mundo mA = (Mundo) appContexAnnotations.getBean("holaMundo");
         System.out.println(mA.getSaludo());
         System.out.println(mA.getDespedida());
