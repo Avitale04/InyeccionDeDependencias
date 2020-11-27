@@ -3,15 +3,34 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--    Ejemplo de Hola Mundo-->
     <bean id="mundo" class="alepruebas.holaMundo.beans.Mundo">
         <property name="saludo" value="Hola Mundo con XML"/>
         <property name="despedida" value="Chao Mundo con XML"/>
     </bean>
+
+<!--    inyectar por constructor-->
     <bean id="persona" class="alepruebas.persona.beans.Persona">
         <constructor-arg type="int" value="95804612"/>
         <constructor-arg type="java.lang.String" value="Alejandro"/>
         <constructor-arg type="java.lang.String" value="Vitale"/>
         <constructor-arg type="java.lang.String" value="Programador"/>
+    </bean>
+
+<!--    Inyeccion de objetos-->
+<!--    Ejemplo de Futbol-->
+    <bean id="equipo" class="alepruebas.futbol.beans.Equipos">
+        <property name="equipo" value="Paris Saint Germain"/>
+        <property name="liga" ref="liga"/>
+    </bean>
+
+    <bean id="liga" class="alepruebas.futbol.beans.Ligas">
+        <property name="nombreLiga" value="Ligue 1"/>
+        <property name="pais" ref="pais"/>
+    </bean>
+
+    <bean id="pais" class="alepruebas.futbol.beans.Paises">
+        <property name="nombrePais" value="Francia"/>
     </bean>
 
 </beans>
