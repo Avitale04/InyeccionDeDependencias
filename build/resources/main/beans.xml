@@ -5,7 +5,8 @@
 
     <bean id="mundo" class="alepruebas.beans.Mundo">
 
-        <property name="saludo" value="Hola Mundo!"></property>
+        <property name="saludo" value="Hola Mundo con XML"></property>
+        <property name="despedida" value="Chao Mundo con XML"></property>
 
     </bean>
 
