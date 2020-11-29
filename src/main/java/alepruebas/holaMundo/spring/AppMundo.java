@@ -3,6 +3,7 @@ package alepruebas.holaMundo.spring;
 import alepruebas.holaMundo.beans.AppConfigMundo;
 import alepruebas.holaMundo.beans.Mundo;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -23,6 +24,9 @@ public class AppMundo {
         Mundo mA = (Mundo) appContexAnnotations.getBean("holaMundo");
         System.out.println(mA.getSaludo());
         System.out.println(mA.getDespedida());
+
+        //cerrar el bean
+        ((ConfigurableApplicationContext)appContexXML).close();
 
     }
 }

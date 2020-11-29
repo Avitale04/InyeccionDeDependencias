@@ -20,7 +20,8 @@ public class Mundo {
     public String getDespedida() {return despedida;}
     public void setDespedida(String despedida) {this.despedida = despedida;}
 
-
+    private void init(){System.out.println("Bean iniciado");}
+    private void destroy(){System.out.println("Bean destruido");}
 
 
 }

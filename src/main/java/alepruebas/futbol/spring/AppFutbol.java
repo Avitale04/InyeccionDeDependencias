@@ -15,7 +15,9 @@ public class AppFutbol {
         //inyeccion por XML
         ApplicationContext institucion = new ClassPathXmlApplicationContext("beans.xml");
         Equipos rm = (Equipos) institucion.getBean("equipo");
-        System.out.println("El "+rm.getEquipo() + " juega en la liga " + rm.getLiga().getNombreLiga() + " en " + rm.getLiga().getPais().getNombrePais());
+        System.out.println("El "+rm.getEquipo() + " juega en la liga " + rm.getLiga().getNombreLiga() + " de " + rm.getLiga().getPais().getNombrePais());
+
+        System.out.println("");
 
         //inyeccion por Anotaciones
         //revisar como usar un solo getBean
@@ -28,3 +30,4 @@ public class AppFutbol {
 
     }
 }
+

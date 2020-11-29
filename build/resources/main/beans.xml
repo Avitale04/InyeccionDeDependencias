@@ -4,13 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    Ejemplo de Hola Mundo-->
-    <bean id="mundo" class="alepruebas.holaMundo.beans.Mundo">
+    <bean id="mundo" class="alepruebas.holaMundo.beans.Mundo" init-method="init" destroy-method="destroy">
         <property name="saludo" value="Hola Mundo con XML"/>
         <property name="despedida" value="Chao Mundo con XML"/>
     </bean>
 
+<!--    Para que las anotaciones de Java funciones-->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+
 <!--    inyectar por constructor-->
-    <bean id="persona" class="alepruebas.persona.beans.Persona">
+<!--    El scope prototype hace que las copias que se realicen de este bean sean en un objeto nuevo-->
+<!--    El scope singleton hace que las copias que se realicen de este bean sean el mismo objeto-->
+<!--    El lazy-init se utiliza para que los objetos se instancien solo cuando se llame al getBean (solo se utiliza con el scope singleton)-->
+    <bean id="persona" class="alepruebas.persona.beans.Persona" scope="prototype">
         <constructor-arg type="int" value="95804612"/>
         <constructor-arg type="java.lang.String" value="Alejandro"/>
         <constructor-arg type="java.lang.String" value="Vitale"/>
@@ -19,18 +25,19 @@
 
 <!--    Inyeccion de objetos-->
 <!--    Ejemplo de Futbol-->
-    <bean id="equipo" class="alepruebas.futbol.beans.Equipos">
-        <property name="equipo" value="Paris Saint Germain"/>
-        <property name="liga" ref="liga"/>
+    <bean id="equipo" class="alepruebas.futbol.beans.Equipos" autowire="byName">
+        <property name="equipo" value="Paris"/>
+<!--        <property name="liga" ref="liga"/>    se omite por el autowire que busca automaticamente las propiedades     -->
     </bean>
 
     <bean id="liga" class="alepruebas.futbol.beans.Ligas">
-        <property name="nombreLiga" value="Ligue 1"/>
-        <property name="pais" ref="pais"/>
+        <property name="nombreLiga" value="1"/>
+        <property name="pais">
+            <bean class="alepruebas.futbol.beans.Paises">
+                <property name="nombrePais" value="Francia"/>
+            </bean>
+        </property>
     </bean>
 
-    <bean id="pais" class="alepruebas.futbol.beans.Paises">
-        <property name="nombrePais" value="Francia"/>
-    </bean>
 
 </beans>
