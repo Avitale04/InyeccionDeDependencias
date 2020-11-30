@@ -7,9 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-<!--ANTES (No funcional)-->
-<!--       Xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"  >-->
-
     <context:component-scan base-package="alepruebas.basket.beans"/> <!--reconoce todas las anotaciones-->
 
     <bean id="LeBron" class="alepruebas.basket.beans.Jugador">

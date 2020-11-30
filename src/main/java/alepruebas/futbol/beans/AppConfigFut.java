@@ -13,13 +13,11 @@ public class AppConfigFut {
 
     @Bean
     public Ligas ligaApp(){
-
         return new Ligas();
     }
 
     @Bean
     public Paises paisApp(){
-
         return new Paises();
     }
 }

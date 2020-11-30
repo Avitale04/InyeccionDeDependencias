@@ -2,6 +2,7 @@ package alepruebas.animales.beans;
 
 import alepruebas.animales.interfaces.Especie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ public class Animal {
     private String nombre;
 
     @Autowired
+    @Qualifier("anfi")
     private Especie especie;
 
     public String getNombre() {return nombre;}

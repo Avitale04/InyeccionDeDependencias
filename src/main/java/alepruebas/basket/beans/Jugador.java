@@ -3,7 +3,6 @@ package alepruebas.basket.beans;
 import alepruebas.basket.interfaces.IEquipo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 
 public class Jugador {
 
