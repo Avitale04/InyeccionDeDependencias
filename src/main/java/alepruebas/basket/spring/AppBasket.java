@@ -16,7 +16,7 @@ public class AppBasket {
 
         //mostrar por interface
         IEquipo equipo = (IEquipo) appContext.getBean("Miami");
-       // IEquipo equipo = (IEquipo) appContext.getBean("Lakers");
+        //IEquipo equipo = (IEquipo) appContext.getBean("Lakers");
         System.out.println(equipo.mostrar());
 
         //cerrar el bean

@@ -1,12 +1,17 @@
 package alepruebas.basket.beans;
 
 import alepruebas.basket.interfaces.IEquipo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Jugador {
 
     private int numero;
     private String nombre;
+
+    @Qualifier("miamiQualifier") //se indica de que bean va a sacar la informacion // no funciona
+    @Autowired
     private IEquipo equipo;
 
     public int getNumero() {
