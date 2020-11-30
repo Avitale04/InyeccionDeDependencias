@@ -7,18 +7,18 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfigFut {
 
     @Bean
-    public Equipos nombreEquipo(){
+    public Equipos equipoApp(){
         return new Equipos();
     }
 
     @Bean
-    public Ligas nombreLiga(){
+    public Ligas ligaApp(){
 
         return new Ligas();
     }
 
     @Bean
-    public Paises nombrePais(){
+    public Paises paisApp(){
 
         return new Paises();
     }

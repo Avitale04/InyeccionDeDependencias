@@ -20,12 +20,9 @@ public class AppFutbol {
         System.out.println("");
 
         //inyeccion por Anotaciones
-        //revisar como usar un solo getBean
         ApplicationContext appContexAnnotations = new AnnotationConfigApplicationContext(AppConfigFut.class);
-        Equipos mu = (Equipos) appContexAnnotations.getBean("nombreEquipo");
-        Ligas mul = (Ligas) appContexAnnotations.getBean("nombreLiga");
-        Paises mup = (Paises) appContexAnnotations.getBean("nombrePais");
-        System.out.println(mu.getEquipo() +" "+ mul.getNombreLiga() +" "+ mup.getNombrePais());
+        Equipos mu = (Equipos) appContexAnnotations.getBean("equipoApp");
+        System.out.println(mu.getEquipo() + " " + mu.getLiga().getNombreLiga() +" "+ mu.getLiga().getPais().getNombrePais());
 
 
     }
