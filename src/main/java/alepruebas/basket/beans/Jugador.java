@@ -3,14 +3,18 @@ package alepruebas.basket.beans;
 import alepruebas.basket.interfaces.IEquipo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 public class Jugador {
 
+    @Value("23")
     private int numero;
+
+    @Value("LeBron")
     private String nombre;
 
     @Autowired
-    @Qualifier("lakersQualifier") //se indica de que bean va a sacar la informacion
+    @Qualifier("miamiApp") //se indica de que bean va a sacar la informacion
     private IEquipo equipo;
 
     public int getNumero() {
